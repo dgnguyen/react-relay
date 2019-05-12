@@ -347,7 +347,7 @@ type Link implements Node {
   createdAt: DateTime!
   description: String!
   id: ID!
-  postedById: ID!
+  postedBy: User
   updatedAt: DateTime!
   url: String!
   votes(filter: VoteFilter, orderBy: VoteOrderBy, skip: Int, after: String, before: String, first: Int, last: Int): VoteConnection

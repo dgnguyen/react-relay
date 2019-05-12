@@ -2675,6 +2675,19 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
+fbjs@^0.8.1:
+  version "0.8.17"
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
+  integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
+  dependencies:
+    core-js "^1.0.0"
+    isomorphic-fetch "^2.1.1"
+    loose-envify "^1.0.0"
+    object-assign "^4.1.0"
+    promise "^7.1.1"
+    setimmediate "^1.0.5"
+    ua-parser-js "^0.7.18"
+
 fbjs@^0.8.14, fbjs@^0.8.16:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
@@ -5532,14 +5545,16 @@ react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
 
-react-relay@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.4.1.tgz#61f7b5802d70446e154490f9d0fceec9150ebda5"
+react-relay@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.2.0.tgz#82ade555f787d6309eacb1fac0c14c3b0c61c4c5"
+  integrity sha512-YiWA0O/Kpx59EiimBVdRPBtF2aMGN5cMgbz8MMHPZvCdDHCcZTcXXawFySf92/qMmfJ4RfEOTi23s4CcuF9/5Q==
   dependencies:
     babel-runtime "^6.23.0"
-    fbjs "^0.8.14"
+    fbjs "^0.8.1"
     prop-types "^15.5.8"
-    relay-runtime "1.4.1"
+    react-static-container "^1.0.1"
+    relay-runtime "1.2.0"
 
 react-router-dom@^4.2.2:
   version "4.2.2"
@@ -5563,6 +5578,11 @@ react-router@^4.2.0:
     path-to-regexp "^1.7.0"
     prop-types "^15.5.4"
     warning "^3.0.0"
+
+react-static-container@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-static-container/-/react-static-container-1.0.2.tgz#30a4f7548860be1d55d5eb4c20645b835c2bdf34"
+  integrity sha512-rxlZtZk5t6Y3gqqpaZ1lxY3RqlQcBU5uGsSoZj/hbF3ZweDqPbFHDkczT4emAxeaw37OD96RAAoayFGFQZCdWg==
 
 react@^16.0.0:
   version "16.0.0"
@@ -5774,6 +5794,14 @@ relay-compiler@^1.4.1:
 relay-debugger-react-native-runtime@0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/relay-debugger-react-native-runtime/-/relay-debugger-react-native-runtime-0.0.10.tgz#0ef36012a1fba928962205514b46f635c652f235"
+
+relay-runtime@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-1.2.0.tgz#d2ed002c9accaa2f1dfdb96f02d0dcd0b40c4376"
+  integrity sha512-UTCqVEyoOhs2qAqvayd195WbumRiTHpMECj26u9G34/huWOECDZJdwKbSg2Nnaejmfoi0i4VfpE30ih8qJvjHQ==
+  dependencies:
+    babel-runtime "^6.23.0"
+    fbjs "^0.8.1"
 
 relay-runtime@1.4.1:
   version "1.4.1"
@@ -6645,6 +6673,11 @@ type-is@~1.6.15:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+ua-parser-js@^0.7.18:
+  version "0.7.19"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
+  integrity sha512-T3PVJ6uz8i0HzPxOF9SWzWAlfN/DavlpQqepn22xgve/5QecC+XMCAtmUNnY7C9StehaV6exjUCI801lOI7QlQ==
 
 ua-parser-js@^0.7.9:
   version "0.7.17"
