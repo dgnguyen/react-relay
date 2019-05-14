@@ -4,14 +4,19 @@ import {
   createFragmentContainer,
   graphql
 } from 'react-relay'
+import NewVoteSubscription from '../subscriptions/NewVoteSubscription'
 
 class LinkList extends Component {
+
+  componentDidMount() {
+    NewVoteSubscription()
+  }
 
   render() {
     return (
       <div>
-        {this.props.viewer.allLinks.edges.map(({node}, index) => (
-          <Link key={node.__id} index={index} link={node}/>
+        {this.props.viewer.allLinks.edges.map(({ node }, index) => (
+          <Link key={node.__id} index={index} link={node} />
         ))}
       </div>
     )

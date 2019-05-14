@@ -1,4 +1,4 @@
-import {GC_AUTH_TOKEN} from './constants'
+import { GC_AUTH_TOKEN } from './constants'
 import { SubscriptionClient } from 'subscriptions-transport-ws'
 
 const {
@@ -30,9 +30,9 @@ export const fetchQuery = (operation, variables) => {
 const setupSubscription = (config, variables, cacheConfig, observer) => {
   const query = config.text
 
-  const subscriptionClient = new SubscriptionClient('wss://subscriptions.graph.cool/v1/__SERVICE_ID__', {reconnect: true})
-  subscriptionClient.subscribe({query, variables}, (error, result) => {
-    observer.onNext({data: result})
+  const subscriptionClient = new SubscriptionClient('wss://subscriptions.graph.cool/v1/cjvewdlkq03iq0193usndubgg', { reconnect: true })
+  subscriptionClient.subscribe({ query, variables }, (error, result) => {
+    observer.onNext({ data: result })
   })
 }
 
