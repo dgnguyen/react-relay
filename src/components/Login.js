@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { GC_USER_ID, GC_AUTH_TOKEN } from '../constants'
-import SigninUserMutation from '../mutations/SigninMutation'
+import SigninUserMutation from '../mutations/SigninUserMutation'
 import CreateUserMutation from '../mutations/CreateUserMutation'
 
 class Login extends Component {
@@ -19,12 +19,12 @@ class Login extends Component {
         <h4 className='mv3'>{this.state.login ? 'Login' : 'Sign Up'}</h4>
         <div className='flex flex-column'>
           {!this.state.login &&
-          <input
-            value={this.state.name}
-            onChange={(e) => this.setState({ name: e.target.value })}
-            type='text'
-            placeholder='Your name'
-          />}
+            <input
+              value={this.state.name}
+              onChange={(e) => this.setState({ name: e.target.value })}
+              type='text'
+              placeholder='Your name'
+            />}
           <input
             value={this.state.email}
             onChange={(e) => this.setState({ email: e.target.value })}
@@ -43,7 +43,7 @@ class Login extends Component {
             className='pointer mr2 button'
             onClick={() => this._confirm()}
           >
-            {this.state.login ? 'login' : 'create Account' }
+            {this.state.login ? 'login' : 'create Account'}
           </div>
           <div
             className='pointer button'
@@ -58,17 +58,17 @@ class Login extends Component {
 
   _confirm = async () => {
     const { name, email, password } = this.state
-  if (this.state.login) {
-    SigninUserMutation(email, password, (id, token) => {
-      this._saveUserData(id, token)
-      this.props.history.push(`/`)
-    })
-  } else {
-    CreateUserMutation(name, email, password, (id, token) => {
-      this._saveUserData(id, token)
-      this.props.history.push(`/`)
-    })
-  }
+    if (this.state.login) {
+      SigninUserMutation(email, password, (id, token) => {
+        this._saveUserData(id, token)
+        this.props.history.push(`/`)
+      })
+    } else {
+      CreateUserMutation(name, email, password, (id, token) => {
+        this._saveUserData(id, token)
+        this.props.history.push(`/`)
+      })
+    }
   }
 
   _saveUserData = (id, token) => {
